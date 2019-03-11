@@ -17,6 +17,8 @@ app.use(express.json())
 //
 //Routes
 app.post('/upload', ctrl.upload)
+app.get('/allFiles', ctrl.allFiles)
+app.get('/indexFiles', ctrl.indexFiles)
 //Run the server
 app.listen(port,
     () => console.log(`Express server ready on port: ${port}`))

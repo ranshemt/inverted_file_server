@@ -3,7 +3,6 @@ const mongoose = require('mongoose')
 const schema_word = new mongoose.Schema({
     isStopWord: {type: Boolean, required: true},
     word: {type: String, required: true},
-    in_docs: {type: Number, required: true},
     docs_refs: [{type: String}],
     docs_hits: [{type: Number}]
 })
