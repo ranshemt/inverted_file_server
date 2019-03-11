@@ -1,0 +1,318 @@
+12-03-2019 01:49:56 debug	 from: controller.js/GET/indexFiles
+> 	docs to index: [{"id":"5c8514ce273a4414c4fc5059","name":"helloWorld.txt"},{"id":"5c8514ce273a4414c4fc505a","name":"wow.txt"}]
+12-03-2019 01:49:56 debug	 from: funcs.js/indexDocument()
+> 	starting indexDocument() of: helloWorld.txt, 5c8514ce273a4414c4fc5059
+12-03-2019 01:49:56 debug	 from: funcs.js/indexDocument()
+> 	data read finish for file: helloWorld.txt
+12-03-2019 01:49:56 debug	 from: funcs.js/indexDocument()
+> 	words of helloWorld.txt: --- the,quick,brown,fox,jumped,over,the,lazy,dog
+12-03-2019 01:49:56 debug	 from: funcs.js/handleWod()
+> 	handling word: the from doc: helloWorld.txt with id: 5c8514ce273a4414c4fc5059
+12-03-2019 01:49:56 debug	 from: funcs.js/handleWod()
+> 	the word the is not in the index and will be added now
+12-03-2019 01:49:57 debug	 from: funcs.js/handleWod()
+> 	the word the was added to the index with id: 5c86f4240a21004838c35f80
+12-03-2019 01:49:57 debug	 from: funcs.js/handleWod()
+> 	no index found for document helloWorld.txt in word: the
+12-03-2019 01:49:57 debug	 from: funcs.js/handleWod()
+> 	updating DB for word: the with refs: helloWorld.txt && hits = 1
+12-03-2019 01:49:57 debug	 from: funcs.js/handleWod()
+> 	the word: the with id: 5c86f4240a21004838c35f80 was updated in index
+12-03-2019 01:49:57 debug	 from: funcs.js/handleWod()
+> 	finished handleWod() for word: the from doc: helloWorld.txt with doc.id: 5c8514ce273a4414c4fc5059
+12-03-2019 01:49:57 debug	 from: funcs.js/indexDocument()
+> 	WORD HANDLE SUCCESS the for doc: helloWorld.txt, doc.id: 5c8514ce273a4414c4fc5059
+12-03-2019 01:49:57 debug	 from: funcs.js/handleWod()
+> 	handling word: quick from doc: helloWorld.txt with id: 5c8514ce273a4414c4fc5059
+12-03-2019 01:49:57 debug	 from: funcs.js/handleWod()
+> 	the word quick is not in the index and will be added now
+12-03-2019 01:49:57 debug	 from: funcs.js/handleWod()
+> 	the word quick was added to the index with id: 5c86f4250a21004838c35f81
+12-03-2019 01:49:57 debug	 from: funcs.js/handleWod()
+> 	no index found for document helloWorld.txt in word: quick
+12-03-2019 01:49:57 debug	 from: funcs.js/handleWod()
+> 	updating DB for word: quick with refs: helloWorld.txt && hits = 1
+12-03-2019 01:49:57 debug	 from: funcs.js/handleWod()
+> 	the word: quick with id: 5c86f4250a21004838c35f81 was updated in index
+12-03-2019 01:49:57 debug	 from: funcs.js/handleWod()
+> 	finished handleWod() for word: quick from doc: helloWorld.txt with doc.id: 5c8514ce273a4414c4fc5059
+12-03-2019 01:49:57 debug	 from: funcs.js/indexDocument()
+> 	WORD HANDLE SUCCESS quick for doc: helloWorld.txt, doc.id: 5c8514ce273a4414c4fc5059
+12-03-2019 01:49:57 debug	 from: funcs.js/handleWod()
+> 	handling word: brown from doc: helloWorld.txt with id: 5c8514ce273a4414c4fc5059
+12-03-2019 01:49:58 debug	 from: funcs.js/handleWod()
+> 	the word brown is not in the index and will be added now
+12-03-2019 01:49:58 debug	 from: funcs.js/handleWod()
+> 	the word brown was added to the index with id: 5c86f4260a21004838c35f82
+12-03-2019 01:49:58 debug	 from: funcs.js/handleWod()
+> 	no index found for document helloWorld.txt in word: brown
+12-03-2019 01:49:58 debug	 from: funcs.js/handleWod()
+> 	updating DB for word: brown with refs: helloWorld.txt && hits = 1
+12-03-2019 01:49:58 debug	 from: funcs.js/handleWod()
+> 	the word: brown with id: 5c86f4260a21004838c35f82 was updated in index
+12-03-2019 01:49:58 debug	 from: funcs.js/handleWod()
+> 	finished handleWod() for word: brown from doc: helloWorld.txt with doc.id: 5c8514ce273a4414c4fc5059
+12-03-2019 01:49:58 debug	 from: funcs.js/indexDocument()
+> 	WORD HANDLE SUCCESS brown for doc: helloWorld.txt, doc.id: 5c8514ce273a4414c4fc5059
+12-03-2019 01:49:58 debug	 from: funcs.js/handleWod()
+> 	handling word: fox from doc: helloWorld.txt with id: 5c8514ce273a4414c4fc5059
+12-03-2019 01:49:58 debug	 from: funcs.js/handleWod()
+> 	the word fox is not in the index and will be added now
+12-03-2019 01:49:58 debug	 from: funcs.js/handleWod()
+> 	the word fox was added to the index with id: 5c86f4260a21004838c35f83
+12-03-2019 01:49:58 debug	 from: funcs.js/handleWod()
+> 	no index found for document helloWorld.txt in word: fox
+12-03-2019 01:49:58 debug	 from: funcs.js/handleWod()
+> 	updating DB for word: fox with refs: helloWorld.txt && hits = 1
+12-03-2019 01:49:58 debug	 from: funcs.js/handleWod()
+> 	the word: fox with id: 5c86f4260a21004838c35f83 was updated in index
+12-03-2019 01:49:58 debug	 from: funcs.js/handleWod()
+> 	finished handleWod() for word: fox from doc: helloWorld.txt with doc.id: 5c8514ce273a4414c4fc5059
+12-03-2019 01:49:58 debug	 from: funcs.js/indexDocument()
+> 	WORD HANDLE SUCCESS fox for doc: helloWorld.txt, doc.id: 5c8514ce273a4414c4fc5059
+12-03-2019 01:49:58 debug	 from: funcs.js/handleWod()
+> 	handling word: jumped from doc: helloWorld.txt with id: 5c8514ce273a4414c4fc5059
+12-03-2019 01:49:58 debug	 from: funcs.js/handleWod()
+> 	the word jumped is not in the index and will be added now
+12-03-2019 01:49:58 debug	 from: funcs.js/handleWod()
+> 	the word jumped was added to the index with id: 5c86f4260a21004838c35f84
+12-03-2019 01:49:58 debug	 from: funcs.js/handleWod()
+> 	no index found for document helloWorld.txt in word: jumped
+12-03-2019 01:49:58 debug	 from: funcs.js/handleWod()
+> 	updating DB for word: jumped with refs: helloWorld.txt && hits = 1
+12-03-2019 01:49:58 debug	 from: funcs.js/handleWod()
+> 	the word: jumped with id: 5c86f4260a21004838c35f84 was updated in index
+12-03-2019 01:49:58 debug	 from: funcs.js/handleWod()
+> 	finished handleWod() for word: jumped from doc: helloWorld.txt with doc.id: 5c8514ce273a4414c4fc5059
+12-03-2019 01:49:58 debug	 from: funcs.js/indexDocument()
+> 	WORD HANDLE SUCCESS jumped for doc: helloWorld.txt, doc.id: 5c8514ce273a4414c4fc5059
+12-03-2019 01:49:58 debug	 from: funcs.js/handleWod()
+> 	handling word: over from doc: helloWorld.txt with id: 5c8514ce273a4414c4fc5059
+12-03-2019 01:49:58 debug	 from: funcs.js/handleWod()
+> 	the word over is not in the index and will be added now
+12-03-2019 01:49:59 debug	 from: funcs.js/handleWod()
+> 	the word over was added to the index with id: 5c86f4260a21004838c35f85
+12-03-2019 01:49:59 debug	 from: funcs.js/handleWod()
+> 	no index found for document helloWorld.txt in word: over
+12-03-2019 01:49:59 debug	 from: funcs.js/handleWod()
+> 	updating DB for word: over with refs: helloWorld.txt && hits = 1
+12-03-2019 01:49:59 debug	 from: funcs.js/handleWod()
+> 	the word: over with id: 5c86f4260a21004838c35f85 was updated in index
+12-03-2019 01:49:59 debug	 from: funcs.js/handleWod()
+> 	finished handleWod() for word: over from doc: helloWorld.txt with doc.id: 5c8514ce273a4414c4fc5059
+12-03-2019 01:49:59 debug	 from: funcs.js/indexDocument()
+> 	WORD HANDLE SUCCESS over for doc: helloWorld.txt, doc.id: 5c8514ce273a4414c4fc5059
+12-03-2019 01:49:59 debug	 from: funcs.js/handleWod()
+> 	handling word: the from doc: helloWorld.txt with id: 5c8514ce273a4414c4fc5059
+12-03-2019 01:49:59 debug	 from: funcs.js/handleWod()
+> 	the word the is in the index with id: 5c86f4240a21004838c35f80
+12-03-2019 01:49:59 debug	 from: funcs.js/handleWod()
+> 	it is: {"docs_refs":["helloWorld.txt"],"docs_hits":[1],"_id":"5c86f4240a21004838c35f80","isStopWord":true,"word":"the","__v":0}
+12-03-2019 01:49:59 debug	 from: funcs.js/handleWod()
+> 	found index for document helloWorld.txt in word: the is: 0
+12-03-2019 01:49:59 debug	 from: funcs.js/handleWod()
+> 	updating DB for word: the with refs: helloWorld.txt && hits = 2
+12-03-2019 01:49:59 debug	 from: funcs.js/handleWod()
+> 	the word: the with id: 5c86f4240a21004838c35f80 was updated in index
+12-03-2019 01:49:59 debug	 from: funcs.js/handleWod()
+> 	finished handleWod() for word: the from doc: helloWorld.txt with doc.id: 5c8514ce273a4414c4fc5059
+12-03-2019 01:49:59 debug	 from: funcs.js/indexDocument()
+> 	WORD HANDLE SUCCESS the for doc: helloWorld.txt, doc.id: 5c8514ce273a4414c4fc5059
+12-03-2019 01:49:59 debug	 from: funcs.js/handleWod()
+> 	handling word: lazy from doc: helloWorld.txt with id: 5c8514ce273a4414c4fc5059
+12-03-2019 01:49:59 debug	 from: funcs.js/handleWod()
+> 	the word lazy is not in the index and will be added now
+12-03-2019 01:49:59 debug	 from: funcs.js/handleWod()
+> 	the word lazy was added to the index with id: 5c86f4270a21004838c35f86
+12-03-2019 01:49:59 debug	 from: funcs.js/handleWod()
+> 	no index found for document helloWorld.txt in word: lazy
+12-03-2019 01:49:59 debug	 from: funcs.js/handleWod()
+> 	updating DB for word: lazy with refs: helloWorld.txt && hits = 1
+12-03-2019 01:49:59 debug	 from: funcs.js/handleWod()
+> 	the word: lazy with id: 5c86f4270a21004838c35f86 was updated in index
+12-03-2019 01:49:59 debug	 from: funcs.js/handleWod()
+> 	finished handleWod() for word: lazy from doc: helloWorld.txt with doc.id: 5c8514ce273a4414c4fc5059
+12-03-2019 01:49:59 debug	 from: funcs.js/indexDocument()
+> 	WORD HANDLE SUCCESS lazy for doc: helloWorld.txt, doc.id: 5c8514ce273a4414c4fc5059
+12-03-2019 01:49:59 debug	 from: funcs.js/handleWod()
+> 	handling word: dog from doc: helloWorld.txt with id: 5c8514ce273a4414c4fc5059
+12-03-2019 01:49:59 debug	 from: funcs.js/handleWod()
+> 	the word dog is not in the index and will be added now
+12-03-2019 01:49:59 debug	 from: funcs.js/handleWod()
+> 	the word dog was added to the index with id: 5c86f4270a21004838c35f87
+12-03-2019 01:49:59 debug	 from: funcs.js/handleWod()
+> 	no index found for document helloWorld.txt in word: dog
+12-03-2019 01:49:59 debug	 from: funcs.js/handleWod()
+> 	updating DB for word: dog with refs: helloWorld.txt && hits = 1
+12-03-2019 01:49:59 debug	 from: funcs.js/handleWod()
+> 	the word: dog with id: 5c86f4270a21004838c35f87 was updated in index
+12-03-2019 01:49:59 debug	 from: funcs.js/handleWod()
+> 	finished handleWod() for word: dog from doc: helloWorld.txt with doc.id: 5c8514ce273a4414c4fc5059
+12-03-2019 01:49:59 debug	 from: funcs.js/indexDocument()
+> 	WORD HANDLE SUCCESS dog for doc: helloWorld.txt, doc.id: 5c8514ce273a4414c4fc5059
+12-03-2019 01:49:59 debug	 from: funcs.js/indexDocument()
+> 	finished indexDocument() for doc: helloWorld.txt, doc.id: 5c8514ce273a4414c4fc5059
+12-03-2019 01:49:59 error	 from: funcs.js/indexDocument()
+> 	total 0 words handles with errors
+12-03-2019 01:49:59 debug	 from: controller.js/GET/indexFiles
+> 	SUCCESS indexDocument() for {"id":"5c8514ce273a4414c4fc5059","name":"helloWorld.txt"}
+12-03-2019 01:49:59 debug	 from: funcs.js/indexDocument()
+> 	starting indexDocument() of: wow.txt, 5c8514ce273a4414c4fc505a
+12-03-2019 01:49:59 debug	 from: funcs.js/indexDocument()
+> 	data read finish for file: wow.txt
+12-03-2019 01:49:59 debug	 from: funcs.js/indexDocument()
+> 	words of wow.txt: --- quick,brown,foxes,leap,over,lazy,dogs,in,summer
+12-03-2019 01:49:59 debug	 from: funcs.js/handleWod()
+> 	handling word: quick from doc: wow.txt with id: 5c8514ce273a4414c4fc505a
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	the word quick is in the index with id: 5c86f4250a21004838c35f81
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	it is: {"docs_refs":["helloWorld.txt"],"docs_hits":[1],"_id":"5c86f4250a21004838c35f81","isStopWord":false,"word":"quick","__v":0}
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	no index found for document wow.txt in word: quick
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	updating DB for word: quick with refs: helloWorld.txt,wow.txt && hits = 1,1
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	the word: quick with id: 5c86f4250a21004838c35f81 was updated in index
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	finished handleWod() for word: quick from doc: wow.txt with doc.id: 5c8514ce273a4414c4fc505a
+12-03-2019 01:50:00 debug	 from: funcs.js/indexDocument()
+> 	WORD HANDLE SUCCESS quick for doc: wow.txt, doc.id: 5c8514ce273a4414c4fc505a
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	handling word: brown from doc: wow.txt with id: 5c8514ce273a4414c4fc505a
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	the word brown is in the index with id: 5c86f4260a21004838c35f82
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	it is: {"docs_refs":["helloWorld.txt"],"docs_hits":[1],"_id":"5c86f4260a21004838c35f82","isStopWord":false,"word":"brown","__v":0}
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	no index found for document wow.txt in word: brown
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	updating DB for word: brown with refs: helloWorld.txt,wow.txt && hits = 1,1
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	the word: brown with id: 5c86f4260a21004838c35f82 was updated in index
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	finished handleWod() for word: brown from doc: wow.txt with doc.id: 5c8514ce273a4414c4fc505a
+12-03-2019 01:50:00 debug	 from: funcs.js/indexDocument()
+> 	WORD HANDLE SUCCESS brown for doc: wow.txt, doc.id: 5c8514ce273a4414c4fc505a
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	handling word: foxes from doc: wow.txt with id: 5c8514ce273a4414c4fc505a
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	the word foxes is not in the index and will be added now
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	the word foxes was added to the index with id: 5c86f4280a21004838c35f88
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	no index found for document wow.txt in word: foxes
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	updating DB for word: foxes with refs: wow.txt && hits = 1
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	the word: foxes with id: 5c86f4280a21004838c35f88 was updated in index
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	finished handleWod() for word: foxes from doc: wow.txt with doc.id: 5c8514ce273a4414c4fc505a
+12-03-2019 01:50:00 debug	 from: funcs.js/indexDocument()
+> 	WORD HANDLE SUCCESS foxes for doc: wow.txt, doc.id: 5c8514ce273a4414c4fc505a
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	handling word: leap from doc: wow.txt with id: 5c8514ce273a4414c4fc505a
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	the word leap is not in the index and will be added now
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	the word leap was added to the index with id: 5c86f4280a21004838c35f89
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	no index found for document wow.txt in word: leap
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	updating DB for word: leap with refs: wow.txt && hits = 1
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	the word: leap with id: 5c86f4280a21004838c35f89 was updated in index
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	finished handleWod() for word: leap from doc: wow.txt with doc.id: 5c8514ce273a4414c4fc505a
+12-03-2019 01:50:00 debug	 from: funcs.js/indexDocument()
+> 	WORD HANDLE SUCCESS leap for doc: wow.txt, doc.id: 5c8514ce273a4414c4fc505a
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	handling word: over from doc: wow.txt with id: 5c8514ce273a4414c4fc505a
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	the word over is in the index with id: 5c86f4260a21004838c35f85
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	it is: {"docs_refs":["helloWorld.txt"],"docs_hits":[1],"_id":"5c86f4260a21004838c35f85","isStopWord":true,"word":"over","__v":0}
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	no index found for document wow.txt in word: over
+12-03-2019 01:50:00 debug	 from: funcs.js/handleWod()
+> 	updating DB for word: over with refs: helloWorld.txt,wow.txt && hits = 1,1
+12-03-2019 01:50:01 debug	 from: funcs.js/handleWod()
+> 	the word: over with id: 5c86f4260a21004838c35f85 was updated in index
+12-03-2019 01:50:01 debug	 from: funcs.js/handleWod()
+> 	finished handleWod() for word: over from doc: wow.txt with doc.id: 5c8514ce273a4414c4fc505a
+12-03-2019 01:50:01 debug	 from: funcs.js/indexDocument()
+> 	WORD HANDLE SUCCESS over for doc: wow.txt, doc.id: 5c8514ce273a4414c4fc505a
+12-03-2019 01:50:01 debug	 from: funcs.js/handleWod()
+> 	handling word: lazy from doc: wow.txt with id: 5c8514ce273a4414c4fc505a
+12-03-2019 01:50:01 debug	 from: funcs.js/handleWod()
+> 	the word lazy is in the index with id: 5c86f4270a21004838c35f86
+12-03-2019 01:50:01 debug	 from: funcs.js/handleWod()
+> 	it is: {"docs_refs":["helloWorld.txt"],"docs_hits":[1],"_id":"5c86f4270a21004838c35f86","isStopWord":false,"word":"lazy","__v":0}
+12-03-2019 01:50:01 debug	 from: funcs.js/handleWod()
+> 	no index found for document wow.txt in word: lazy
+12-03-2019 01:50:01 debug	 from: funcs.js/handleWod()
+> 	updating DB for word: lazy with refs: helloWorld.txt,wow.txt && hits = 1,1
+12-03-2019 01:50:01 debug	 from: funcs.js/handleWod()
+> 	the word: lazy with id: 5c86f4270a21004838c35f86 was updated in index
+12-03-2019 01:50:01 debug	 from: funcs.js/handleWod()
+> 	finished handleWod() for word: lazy from doc: wow.txt with doc.id: 5c8514ce273a4414c4fc505a
+12-03-2019 01:50:01 debug	 from: funcs.js/indexDocument()
+> 	WORD HANDLE SUCCESS lazy for doc: wow.txt, doc.id: 5c8514ce273a4414c4fc505a
+12-03-2019 01:50:01 debug	 from: funcs.js/handleWod()
+> 	handling word: dogs from doc: wow.txt with id: 5c8514ce273a4414c4fc505a
+12-03-2019 01:50:01 debug	 from: funcs.js/handleWod()
+> 	the word dogs is not in the index and will be added now
+12-03-2019 01:50:01 debug	 from: funcs.js/handleWod()
+> 	the word dogs was added to the index with id: 5c86f4290a21004838c35f8a
+12-03-2019 01:50:01 debug	 from: funcs.js/handleWod()
+> 	no index found for document wow.txt in word: dogs
+12-03-2019 01:50:01 debug	 from: funcs.js/handleWod()
+> 	updating DB for word: dogs with refs: wow.txt && hits = 1
+12-03-2019 01:50:01 debug	 from: funcs.js/handleWod()
+> 	the word: dogs with id: 5c86f4290a21004838c35f8a was updated in index
+12-03-2019 01:50:01 debug	 from: funcs.js/handleWod()
+> 	finished handleWod() for word: dogs from doc: wow.txt with doc.id: 5c8514ce273a4414c4fc505a
+12-03-2019 01:50:01 debug	 from: funcs.js/indexDocument()
+> 	WORD HANDLE SUCCESS dogs for doc: wow.txt, doc.id: 5c8514ce273a4414c4fc505a
+12-03-2019 01:50:01 debug	 from: funcs.js/handleWod()
+> 	handling word: in from doc: wow.txt with id: 5c8514ce273a4414c4fc505a
+12-03-2019 01:50:01 debug	 from: funcs.js/handleWod()
+> 	the word in is not in the index and will be added now
+12-03-2019 01:50:01 debug	 from: funcs.js/handleWod()
+> 	the word in was added to the index with id: 5c86f4290a21004838c35f8b
+12-03-2019 01:50:01 debug	 from: funcs.js/handleWod()
+> 	no index found for document wow.txt in word: in
+12-03-2019 01:50:01 debug	 from: funcs.js/handleWod()
+> 	updating DB for word: in with refs: wow.txt && hits = 1
+12-03-2019 01:50:01 debug	 from: funcs.js/handleWod()
+> 	the word: in with id: 5c86f4290a21004838c35f8b was updated in index
+12-03-2019 01:50:01 debug	 from: funcs.js/handleWod()
+> 	finished handleWod() for word: in from doc: wow.txt with doc.id: 5c8514ce273a4414c4fc505a
+12-03-2019 01:50:01 debug	 from: funcs.js/indexDocument()
+> 	WORD HANDLE SUCCESS in for doc: wow.txt, doc.id: 5c8514ce273a4414c4fc505a
+12-03-2019 01:50:01 debug	 from: funcs.js/handleWod()
+> 	handling word: summer from doc: wow.txt with id: 5c8514ce273a4414c4fc505a
+12-03-2019 01:50:01 debug	 from: funcs.js/handleWod()
+> 	the word summer is not in the index and will be added now
+12-03-2019 01:50:01 debug	 from: funcs.js/handleWod()
+> 	the word summer was added to the index with id: 5c86f4290a21004838c35f8c
+12-03-2019 01:50:01 debug	 from: funcs.js/handleWod()
+> 	no index found for document wow.txt in word: summer
+12-03-2019 01:50:01 debug	 from: funcs.js/handleWod()
+> 	updating DB for word: summer with refs: wow.txt && hits = 1
+12-03-2019 01:50:02 debug	 from: funcs.js/handleWod()
+> 	the word: summer with id: 5c86f4290a21004838c35f8c was updated in index
+12-03-2019 01:50:02 debug	 from: funcs.js/handleWod()
+> 	finished handleWod() for word: summer from doc: wow.txt with doc.id: 5c8514ce273a4414c4fc505a
+12-03-2019 01:50:02 debug	 from: funcs.js/indexDocument()
+> 	WORD HANDLE SUCCESS summer for doc: wow.txt, doc.id: 5c8514ce273a4414c4fc505a
+12-03-2019 01:50:02 debug	 from: funcs.js/indexDocument()
+> 	finished indexDocument() for doc: wow.txt, doc.id: 5c8514ce273a4414c4fc505a
+12-03-2019 01:50:02 error	 from: funcs.js/indexDocument()
+> 	total 0 words handles with errors
+12-03-2019 01:50:02 debug	 from: controller.js/GET/indexFiles
+> 	SUCCESS indexDocument() for {"id":"5c8514ce273a4414c4fc505a","name":"wow.txt"}
+12-03-2019 01:50:02 debug	 from: controller.js/GET/indexFiles
+> 	finished indexing all files
+12-03-2019 01:50:02 error	 from: controller.js/GET/indexFiles
+> 	total docs errors while indexing: 0

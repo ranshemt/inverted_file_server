@@ -5,13 +5,6 @@ var isObj = function(variable){
     return true
 }
 //
-var printErr = function(err){
-    if(isObj(err))
-        console.log(`err: ${JSON.stringify(err)}`)
-    else
-        console.log(`err: ${err}`)
-}
-//
 var stringErr = function(err){
     if(isObj(err))
         return JSON.stringify(err)
@@ -20,6 +13,5 @@ var stringErr = function(err){
 }
 module.exports = {
     isObj,
-    printErr,
     stringErr
 }

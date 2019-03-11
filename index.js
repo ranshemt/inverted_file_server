@@ -1,11 +1,13 @@
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').load();
 }
-//npm modules
+//
+const ML            =   require ('./logger')
 const express       =   require ('express')
 const cors          =   require ('cors')
-//my modules
 const ctrl          =   require ('./controller')
+//
+const FiLe = 'index.js'
 //Establish app()
 const app   =   express()
 const port  =   process.env.PORT || 5555
@@ -20,5 +22,7 @@ app.post('/upload', ctrl.upload)
 app.get('/allFiles', ctrl.allFiles)
 app.get('/indexFiles', ctrl.indexFiles)
 //Run the server
-app.listen(port,
-    () => console.log(`Express server ready on port: ${port}`))
+app.listen(port, () => {
+    ML.log({message: `Express server ready on port: ${port}`,
+        level: 'info', src: `${FiLe}/app.listen` })
+})

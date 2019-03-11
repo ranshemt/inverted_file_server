@@ -4,10 +4,14 @@ const fs            = require ('fs')
 const Doc           = require ('./DataBase/doc')
 const funcs         = require ('./funcs')
 const Ufuncs        = require ('./utilFuncs')
+const ML            = require ('./logger')
+const FiLe = 'controller.js'
 //
 //
 var upload = async function(req, res, next){
-    console.log('starting POST /upload')
+    let fNaMe = 'POST/upload'
+    ML.log({message: `starting ${fNaMe}`,
+        level: 'debug', src: `${FiLe}/${fNaMe}` })
     //new incoming file form and settings
     let form = new formidable.IncomingForm()
     form.encoding = 'utf-8'
@@ -21,19 +25,26 @@ var upload = async function(req, res, next){
     })
     //
     form.on('progress', (bytesReceived, bytesExcepted) => {
-        console.log(`bytesReceived = ${bytesReceived} ... bytesExcepted = ${bytesExcepted}`)
+        ML.log({message: `bytesReceived = ${bytesReceived} ... bytesExcepted = ${bytesExcepted}`,
+            level: 'debug', src: `${FiLe}/${fNaMe}` })
     })
     //
     form.on('error', (err) => {
-        console.log(`error occured: ${err}`)
-        return res.status(500).json(err)
+        let Serr = Ufuncs.stringErr(err)
+        ML.log({message: `${Serr}`,
+            level: 'error', src: `${FiLe}/${fNaMe}` })
+        return res.status(500).json({
+            msg: '',
+            err: Serr
+        })
     })
     //
     form.parse(req, (err, fields, files) => {
         // res.writeHead(200, {'content-type': 'text/plain'});
         // res.write('received upload:\n\n');
         // res.end(util.inspect({fields: fields, files: files}));
-        console.log('parsing')
+        ML.log({message: `parsing`,
+            level: 'debug', src: `${FiLe}/${fNaMe}/form.parse` })
         filesNames = files.files.map(currFile => currFile.name)
         // console.log(`err: ${err}`)
         // console.log(`fields: ${fields}`)
@@ -43,7 +54,8 @@ var upload = async function(req, res, next){
         let errFiles = []
         //update files in DB
         filesNames.forEach(currName => {
-            console.log(`saving doc: ${currName}`)
+            ML.log({message: `saving doc: ${currName}`,
+                level: 'debug', src: `${FiLe}/${fNaMe}/form.on('end')` })
             Doc.create(
                 {
                     isIndexed: false,
@@ -59,7 +71,8 @@ var upload = async function(req, res, next){
             )
         })
         //
-        console.log('end POST /upload')
+        ML.log({message: `starting ${fNaMe}`,
+                level: 'debug', src: `${FiLe}/${fNaMe}` })
         return res.status(200).json({
             files: filesNames,
             errFiles
@@ -69,19 +82,20 @@ var upload = async function(req, res, next){
 //
 //
 var allFiles = function(req, res, next){
+    let fNaMe = 'GET/allFiles'
     let path = __dirname + '/public/files'
     //
     fs.readdir(path, (err, items) => {
         if(err){
-            let msg = ''
-            if(typeof err === 'object' && !Array.isArray(err))
-                msg = JSON.stringify(err)
-            else
-                msg = err
-            return res.status(500).json({msg: err})
+            let Serr = Ufuncs.stringErr(err)
+            return res.status(500).json({
+                msg: '',
+                err: Serr
+            })
         }
         //
-        console.log(`files in server: ${items}`)
+        ML.log({message: `files in server: ${items}`,
+                level: 'debug', src: `${FiLe}/${fNaMe}` })
         return res.status(200).json({
             filesAmount: items.length,
             names: [...items]
@@ -93,6 +107,7 @@ var allFiles = function(req, res, next){
 var indexFiles = async function(req, res, next){
     //
     //docs to index
+    let fNaMe = 'GET/indexFiles'
     let docsFound = []
     let MSG = '', ERR = '', MSGhistory = '', ERRhistory = ''
     let nestedERR = '', nestedMSG = '' ,docsErrors = 0
@@ -100,11 +115,15 @@ var indexFiles = async function(req, res, next){
         let queryResult = await Doc.find({isIndexed: false}).exec()
         docsFound = queryResult.map(currDoc => ({id: currDoc._id, name: currDoc.name}))
         MSG += `\ndocs to index: ${JSON.stringify(docsFound)}`
+        ML.log({message: `docs to index: ${JSON.stringify(docsFound)}`,
+                level: 'debug', src: `${FiLe}/${fNaMe}` })
     }
     catch(err){
-        ERR += `\nindexFiles ERROR: ${Ufuncs.stringErr(err)}`
-        ERR += `\nindexFiles FAILED because of find`
-        Ufuncs.printErr(err)
+        let Serr = Ufuncs.stringErr(err)
+        ERR += `\nindexFiles ERROR: ${Serr}`
+        ERR += `\nindexFiles FAILED because of Doc.find()`
+        ML.log({message: `${fNaMe} FAILED because of Doc.find(): ${Serr}`,
+                level: 'error', src: `${FiLe}/${fNaMe}` })
         res.status(500).json({
             msg: MSG,
             err: ERR,
@@ -121,20 +140,28 @@ var indexFiles = async function(req, res, next){
             ERRhistory += promise_indexDocument.err
             nestedMSG += promise_indexDocument.err_history
             nestedERR += promise_indexDocument.msg_history
-            MSG += `\nSUCCESS indexDocument for ${JSON.stringify(currDoc)}`
+            MSG += `\nSUCCESS indexDocument() for ${JSON.stringify(currDoc)}`
+            ML.log({message: `SUCCESS indexDocument() for ${JSON.stringify(currDoc)}`,
+                level: 'debug', src: `${FiLe}/${fNaMe}` })
         }
         catch(err){
             MSGhistory += promise_indexDocument.msg
             ERRhistory += promise_indexDocument.err
             nestedMSG += promise_indexDocument.err_history
             nestedERR += promise_indexDocument.msg_history
-            ERR += `\nSUCCESS indexDocument for ${JSON.stringify(currDoc)}`
+            ERR += `\nFAILURE indexDocument() for ${JSON.stringify(currDoc)}`
+            ML.log({message: `FAILURE indexDocument() for ${JSON.stringify(currDoc)}`,
+                level: 'error', src: `${FiLe}/${fNaMe}` })
             docsErrors++
         }
     }
     //
-    console.log(`finished indexing all files`)
-    ERR += `total docs errors while indexing: ${docsErrors}`
+    //console.log(`finished indexing all files`)
+    ML.log({message: `finished indexing all files`,
+                level: 'debug', src: `${FiLe}/${fNaMe}` })
+    ERR += `\ntotal docs errors while indexing: ${docsErrors}`
+    ML.log({message: `total docs errors while indexing: ${docsErrors}`,
+                level: 'error', src: `${FiLe}/${fNaMe}` })
     res.status(200).json({
         msg: MSG,
         err: ERR,
